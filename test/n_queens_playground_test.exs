@@ -10,7 +10,16 @@ defmodule NQueensPlaygroundTest do
 
     result = solve(1) |> Enum.map(&render(1, &1))
 
-    assert Enum.member?(result, solution)
+    assert result |> Enum.member?(solution)
+  end
+
+  test "2-queens has no solution" do
+    solution =
+      []
+
+    result = solve(2)
+
+    assert result == solution
   end
 
   test "4-queens includes a known solution" do
@@ -27,6 +36,6 @@ defmodule NQueensPlaygroundTest do
     result = solve(4) |> Enum.map(&render(4, &1))
 
     # Assert that our known-good solution is one of the solutions returned.
-    assert Enum.member?(result, solution)
+    assert result |> Enum.member?(solution)
   end
 end
