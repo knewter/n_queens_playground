@@ -1,4 +1,13 @@
 defmodule NQueens do
+  @moduledoc """
+  `NQueens` is a module that encapsulates an algorithm to solve the [N-Queens
+  Problem](https://developers.google.com/optimization/puzzles/queens).
+
+  Its only important public function is `solve/1` but I've left the rest
+  exported for playing with in the REPL.
+  """
+
+
   @typedoc """
   A `branch_state` represents the state for a branch of our N-Queens calculation.
   It is represented as a 2-tuple containing:
