@@ -103,8 +103,9 @@ not used for calculations, and is entirely meant for display purposes</p>
     <a href="#t:branch_state/0">branch_state()</a>
   </div>
   
-    <div class="summary-synopsis"><p>A <code class="inline">branch_state</code> represents the state for a branch of our N-Queens calculation.
-It is represented as a 2-tuple containing</p>
+    <div class="summary-synopsis"><p>A <code class="inline">branch_state</code> represents the state for a branch of our N-Queens
+calculation.  It is represented as a 2-tuple containing <code class="inline">n</code> and <code class="inline">positions</code>,
+where <code class="inline">positions</code> is a list of type <code class="inline">position</code></p>
 </div>
   
 </div>
@@ -261,15 +262,9 @@ not used for calculations, and is entirely meant for display purposes.</p>
 <div id="t:branch_state/0" class="type-detail">
   <pre><code class="elixir"><a href="#t:branch_state/0">branch_state</a> :: {non_neg_integer, [<a href="#t:position/0">position</a>]}</code></pre>
   
-    <div class="typespec-doc"><p>A <code class="inline">branch_state</code> represents the state for a branch of our N-Queens calculation.
-It is represented as a 2-tuple containing:</p>
-<ul>
-<li><code class="inline">n</code>
-</li>
-<li><code class="inline">positions</code>
-</li>
-</ul>
-<p>Where <code class="inline">positions</code> is a list of type <code class="inline">position</code>.</p>
+    <div class="typespec-doc"><p>A <code class="inline">branch_state</code> represents the state for a branch of our N-Queens
+calculation.  It is represented as a 2-tuple containing <code class="inline">n</code> and <code class="inline">positions</code>,
+where <code class="inline">positions</code> is a list of type <code class="inline">position</code>.</p>
 </div>
   
 </div>
