@@ -3,11 +3,16 @@ defmodule NQueensPlayground.Mixfile do
 
   def project do
     [app: :n_queens_playground,
+     name: "N-Queens Playground",
      version: "0.0.1",
      elixir: "~> 1.3-rc",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
-     deps: deps]
+     deps: deps,
+     docs: [
+       extras: ["README.md"]
+     ]
+   ]
   end
 
   # Configuration for the OTP application
@@ -29,6 +34,7 @@ defmodule NQueensPlayground.Mixfile do
   defp deps do
     [
       {:dialyxir, "~> 0.3.3", only: [:dev, :test]},
+      {:ex_doc, "~> 0.11", only: :dev}
     ]
   end
 end

@@ -1,24 +1,30 @@
-# NQueensPlayground
+# N-Queens Playground
 
-**TODO: Add description**
+This was just a bit of fun for me to solve the
+[N-Queens Problem](https://developers.google.com/optimization/puzzles/queens) in
+a decidedly functional style, and to use dialyzer to drive types as I went along
+my merry way.
 
-## Installation
+## Example
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
+To solve the N-Queens Problem for N=4:
 
-  1. Add `n_queens_playground` to your list of dependencies in `mix.exs`:
+```elixir
+NQueens.solve(4)
+```
 
-    ```elixir
-    def deps do
-      [{:n_queens_playground, "~> 0.0.1"}]
-    end
-    ```
+## Tests
 
-  2. Ensure `n_queens_playground` is started before your application:
+To run the tests:
 
-    ```elixir
-    def application do
-      [applications: [:n_queens_playground]]
-    end
-    ```
+```sh
+mix test
+```
 
+## Docs
+
+To generate the docs:
+
+```sh
+mix docs
+```
