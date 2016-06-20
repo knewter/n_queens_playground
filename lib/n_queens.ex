@@ -45,6 +45,10 @@ defmodule NQueens do
   `solve/1` takes an N and returns a list of solutions for that N-Queens problem.
   The solutions take the form `{non_neg_integer, non_neg_integer}`, which is
   the same as type `position`.
+
+      iex> NQueens.solve(4)
+      [[{0, 2}, {1, 0}, {2, 3}, {3, 1}], [{0, 1}, {1, 3}, {2, 0}, {3, 2}]]
+
   """
   @spec solve(non_neg_integer) :: list(solution)
   def solve(n) when is_integer(n) and n >= 0 do

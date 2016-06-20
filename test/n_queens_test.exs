@@ -1,6 +1,7 @@
-defmodule NQueensPlaygroundTest do
+defmodule NQueensTest do
   use ExUnit.Case
   import NQueens
+  doctest NQueens
 
   test "1-queens includes a known solution" do
     solution =
