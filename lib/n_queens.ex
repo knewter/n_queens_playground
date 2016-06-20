@@ -47,7 +47,7 @@ defmodule NQueens do
 
   @doc false
   @spec do_solve(branch_state) :: list(solution)
-  def do_solve({n, positions}) when is_integer(n) and n >= 0 and is_list(positions) and length(positions) == n do
+  def do_solve({n, positions}) when is_integer(n) and n >= 0 and length(positions) == n do
     [positions]
   end
   def do_solve({n, positions}) when is_integer(n) and n >= 0 and is_list(positions) do
