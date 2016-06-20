@@ -9,13 +9,9 @@ defmodule NQueens do
 
 
   @typedoc """
-  A `branch_state` represents the state for a branch of our N-Queens calculation.
-  It is represented as a 2-tuple containing:
-
-  - `n`
-  - `positions`
-
-  Where `positions` is a list of type `position`.
+  A `branch_state` represents the state for a branch of our N-Queens
+  calculation.  It is represented as a 2-tuple containing `n` and `positions`,
+  where `positions` is a list of type `position`.
   """
   @type branch_state ::
   {non_neg_integer, list(position)}
