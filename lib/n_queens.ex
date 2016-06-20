@@ -85,13 +85,15 @@ defmodule NQueens do
         do: {x, y}
   end
 
-  def blocked_positions(n, used_positions) do
+  @spec blocked_positions(non_neg_integer, list(position)) :: list(position)
+  def blocked_positions(n, used_positions) when is_integer(n) and n >= 0 and is_list(used_positions) do
     used_positions
     |> Enum.flat_map(&blocked_positions_for_position(n, &1))
     |> Enum.uniq
   end
 
-  def blocked_positions_for_position(n, position) do
+  @spec blocked_positions_for_position(non_neg_integer, position) :: list(position)
+  def blocked_positions_for_position(n, position={_x, _y}) when is_integer(n) and n >= 0 do
     (
       row_for(n, position) ++
       column_for(n, position) ++
@@ -99,17 +101,20 @@ defmodule NQueens do
     ) |> Enum.uniq
   end
 
-  def row_for(n, {_, y}) do
+  @spec row_for(non_neg_integer, position) :: list(position)
+  def row_for(n, {_, y}) when is_integer(n) and n >= 0 and is_integer(y) and y >= 0 do
     for x <- (0..n-1),
         do: {x, y}
   end
 
-  def column_for(n, {x, _}) do
+  @spec column_for(non_neg_integer, position) :: list(position)
+  def column_for(n, {x, _}) when is_integer(n) and n >= 0 and is_integer(x) and x >= 0 do
     for y <- (0..n-1),
         do: {x, y}
   end
 
-  def diagonal_for(n, {x, y}) do
+  @spec diagonal_for(non_neg_integer, position) :: list(position)
+  def diagonal_for(n, {x, y}) when is_integer(n) and n >= 0 and is_integer(x) and x >= 0 and is_integer(y) and y >= 0 do
     for {px, py} <- possible_positions(n),
         abs(x-px) == abs(y-py),
         do: {px, py}
